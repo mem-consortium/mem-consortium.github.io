@@ -40,8 +40,9 @@ to **commit and push** — that's the publish step.
 ## One-time setup (current status and remaining steps)
 
 ### 1. GitHub account and repository — IN PROGRESS
-(Steps 1–2 done: the `mem-consortium` organization exists, contact email
-`mem.consortium@gmail.com`. Remaining: steps 3–6.)
+(Steps 1–4 done: the site lives at github.com/mem-consortium/website,
+organization contact email `mem.consortium@gmail.com`. Remaining:
+steps 5–6, enabling GitHub Pages.)
 
 You only need **one** GitHub account (your own; if you already have one, use
 it — no need for a separate account). Recommended structure so the site
