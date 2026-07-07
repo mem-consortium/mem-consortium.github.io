@@ -45,10 +45,13 @@ You only need **one** GitHub account (your own; if you already have one, use
 it — no need for a separate account). Recommended structure so the site
 survives webmaster handovers:
 
-1. Sign up / sign in at github.com.
+1. Sign up / sign in at github.com (your **personal** account — GitHub access
+   works through personal accounts added to the organization, never a shared
+   login).
 2. Create a **free organization** (github.com → + → New organization → Free)
    named e.g. `memc-consortium`. The organization owns the website, not any
-   one person's account.
+   one person's account. Set the organization's contact email to
+   `mem.consortium@gmail.com`.
 3. Create a repository in that organization named `memc-website` (public —
    required for free GitHub Pages).
 4. Ask Claude: "Push this project to the GitHub repository
@@ -63,10 +66,15 @@ owner (github.com → organization → People → Invite). Never share passwords
 
 ### 2. Google Form + member database — TO DO
 
-1. Using the MEMC Google account (recommended over a personal one — create
-   one if it doesn't exist), go to forms.google.com → new form titled
-   "MEMC Membership Sign-Up" with questions: First name, Last name,
-   Affiliation, Email, Brief description of research interests.
+The consortium's shared Google account is **`mem.consortium@gmail.com`**.
+It owns the sign-up form and the member spreadsheet (and is the GitHub
+organization's contact address). At webmaster handover, pass on the
+password securely and update the account's recovery email/phone
+(Google Account → Security) to the new webmaster.
+
+1. Signed in as `mem.consortium@gmail.com`, go to forms.google.com →
+   new form titled "MEMC Membership Sign-Up" with questions: First name,
+   Last name, Affiliation, Email, Brief description of research interests.
 2. In the form: Responses tab → "Link to Sheets" → create the spreadsheet.
    That spreadsheet **is** the member database; share it with committee
    members who need it.
@@ -74,8 +82,8 @@ owner (github.com → organization → People → Invite). Never share passwords
 4. Ask Claude: "Here's the Google Form embed URL: … — connect it to the
    sign-up page." Then publish.
 
-**Handover:** transfer ownership of the form and sheet (or use a shared MEMC
-Google account from the start).
+**Handover:** nothing to transfer — the form and sheet stay owned by
+`mem.consortium@gmail.com`; just hand over that account (see above).
 
 ### 3. Custom domain — TO DO (optional)
 
