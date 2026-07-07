@@ -145,6 +145,10 @@ h3 {
 section p { max-width: 46rem; margin-bottom: 1rem; }
 section ul { max-width: 46rem; margin: 0 0 1rem 1.4rem; }
 
+/* Sections marked "full-text" let paragraphs span the whole content width
+   (same width as the card boxes) instead of the narrower reading measure. */
+section.full-text p { max-width: none; }
+
 .page-title {
   background: var(--paper-tint);
   border-bottom: 1px solid var(--line);
