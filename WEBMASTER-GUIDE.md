@@ -39,10 +39,11 @@ to **commit and push** — that's the publish step.
 
 ## One-time setup (current status and remaining steps)
 
-### 1. GitHub account and repository — IN PROGRESS
-(Steps 1–4 done: the site lives at github.com/mem-consortium/website,
-organization contact email `mem.consortium@gmail.com`. Remaining:
-steps 5–6, enabling GitHub Pages.)
+### 1. GitHub account and repository — DONE
+(The site lives in the `mem-consortium.github.io` repository of the
+`mem-consortium` organization, contact email `mem.consortium@gmail.com`,
+and is published at https://mem-consortium.github.io/. The steps below are
+kept as a record of how it was set up.)
 
 You only need **one** GitHub account (your own; if you already have one, use
 it — no need for a separate account). Recommended structure so the site
@@ -55,14 +56,14 @@ survives webmaster handovers:
    named `mem-consortium`. The organization owns the website, not any
    one person's account. Set the organization's contact email to
    `mem.consortium@gmail.com`.
-3. Create a repository in that organization named `website` (public —
+3. Create a repository in that organization named `mem-consortium.github.io` (public —
    required for free GitHub Pages).
 4. Ask Claude: "Push this project to the GitHub repository
-   mem-consortium/website" (Claude will give you the one-time login
-   steps if needed).
+   mem-consortium/mem-consortium.github.io" (Claude will give you the
+   one-time login steps if needed).
 5. On github.com: repository → Settings → Pages → Source: "Deploy from a
    branch" → Branch: `main`, folder: `/docs` → Save.
-6. The site goes live at `https://mem-consortium.github.io/website/`.
+6. The site goes live at `https://mem-consortium.github.io/`.
 
 **Handover:** the outgoing webmaster adds the incoming one as an organization
 owner (github.com → organization → People → Invite). Never share passwords.
