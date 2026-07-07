@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem wix_html | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}})",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(mkdir -p docs/css docs/images docs/files)",
+      "Bash(cp site_media/20240419_103342.jpg docs/images/conference-panel-2024.jpg)",
+      "Bash(cp \"site_media/Photo Apr 20 2024, 12 07 50 PM.jpg\" docs/images/conference-audience-2024.jpg)",
+      "Bash(cp site_media/250206_Rotman_MEM_Conference_Schedule.pdf docs/files/2025-conference-program.pdf)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'First version of the MEMC website *)"
+    ]
+  }
+}

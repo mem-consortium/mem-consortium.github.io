@@ -1,0 +1,253 @@
+/* ==========================================================================
+   MEMC website stylesheet
+   Shared by every page. Colors and fonts are defined once, here.
+   ========================================================================== */
+
+:root {
+  --navy: #17334e;        /* headers, footer, buttons */
+  --navy-dark: #0f2437;
+  --gold: #c8a253;        /* small accents */
+  --ink: #26313c;         /* body text */
+  --muted: #5b6a77;       /* secondary text */
+  --paper: #ffffff;
+  --paper-tint: #f4f6f8;  /* alternating section background */
+  --line: #dde3e8;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* --- Header / navigation ------------------------------------------------ */
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.1rem 0;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; }
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: var(--navy); }
+nav a.current { color: var(--navy); border-bottom-color: var(--gold); }
+
+/* --- Hero (home page) --------------------------------------------------- */
+
+.hero {
+  background: var(--navy);
+  color: #fff;
+  padding: 4.5rem 0 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: #cdd8e2;
+  font-size: 1.1rem;
+}
+
+.hero .kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+/* --- Buttons ------------------------------------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.6rem;
+  margin: 0 0.4rem 0.5rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+}
+
+.btn-solid { background: var(--gold); color: var(--navy-dark); }
+.btn-solid:hover { filter: brightness(1.06); }
+.btn-ghost { border: 1px solid rgba(255,255,255,0.55); color: #fff; }
+.btn-ghost:hover { border-color: #fff; }
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-navy:hover { background: var(--navy-dark); }
+
+/* --- Page sections ------------------------------------------------------ */
+
+section { padding: 3.5rem 0; }
+section.tint { background: var(--paper-tint); }
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: normal;
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: var(--navy);
+  margin: 1.6rem 0 0.5rem;
+}
+
+section p { max-width: 46rem; margin-bottom: 1rem; }
+section ul { max-width: 46rem; margin: 0 0 1rem 1.4rem; }
+
+.page-title {
+  background: var(--paper-tint);
+  border-bottom: 1px solid var(--line);
+  padding: 2.6rem 0;
+}
+
+.page-title h1 {
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: 2.2rem;
+  color: var(--navy);
+}
+
+.page-title p { color: var(--muted); margin-top: 0.4rem; max-width: 46rem; }
+
+/* --- Card grid (programs, committee) ------------------------------------ */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.card h3 { margin-top: 0; }
+.card p { font-size: 0.97rem; color: var(--muted); margin-bottom: 0.6rem; }
+
+/* --- Committee member cards --------------------------------------------- */
+
+.person {
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+}
+
+.person img,
+.person .initials {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.person .initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 2.2rem;
+}
+
+.person .name { font-weight: 600; color: var(--navy); }
+.person .role { font-size: 0.92rem; color: var(--muted); }
+
+/* --- Event / seminar listings ------------------------------------------- */
+
+.event {
+  border-left: 3px solid var(--gold);
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  margin: 1.4rem 0;
+  max-width: 46rem;
+}
+
+.event .when { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.event .what { font-weight: 600; color: var(--navy); }
+.event p { margin: 0.2rem 0 0; font-size: 0.97rem; }
+
+/* --- Photo band ---------------------------------------------------------- */
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photos figure img { border-radius: 4px; width: 100%; height: 280px; object-fit: cover; }
+.photos figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+
+/* --- Embedded Google Form ------------------------------------------------ */
+
+.form-embed { max-width: 760px; }
+.form-embed iframe { width: 100%; border: 1px solid var(--line); border-radius: 4px; }
+
+/* --- Footer -------------------------------------------------------------- */
+
+footer {
+  background: var(--navy-dark);
+  color: #b9c6d2;
+  padding: 2.2rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+footer a { color: #e3ebf2; text-decoration: none; margin-right: 1.2rem; }
+footer a:hover { text-decoration: underline; }
