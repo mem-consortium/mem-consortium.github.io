@@ -68,7 +68,11 @@ survives webmaster handovers:
 **Handover:** the outgoing webmaster adds the incoming one as an organization
 owner (github.com → organization → People → Invite). Never share passwords.
 
-### 2. Google Form + member database — TO DO
+### 2. Google Form + member database — DONE
+(The "MEMC Sign Up" form is embedded in the Sign Up page and owned by
+`mem.consortium@gmail.com`; its linked response spreadsheet is the member
+database. Members from the pre-2026 mailing list were imported into it.
+The steps below are kept as a record of how it was set up.)
 
 The consortium's shared Google account is **`mem.consortium@gmail.com`**.
 It owns the sign-up form and the member spreadsheet (and is the GitHub
