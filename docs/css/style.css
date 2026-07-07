@@ -142,12 +142,8 @@ h3 {
   margin: 1.6rem 0 0.5rem;
 }
 
-section p { max-width: 46rem; margin-bottom: 1rem; }
-section ul { max-width: 46rem; margin: 0 0 1rem 1.4rem; }
-
-/* Sections marked "full-text" let paragraphs span the whole content width
-   (same width as the card boxes) instead of the narrower reading measure. */
-section.full-text p { max-width: none; }
+section p { margin-bottom: 1rem; }
+section ul { margin: 0 0 1rem 1.4rem; }
 
 .page-title {
   background: var(--paper-tint);
@@ -162,7 +158,7 @@ section.full-text p { max-width: none; }
   color: var(--navy);
 }
 
-.page-title p { color: var(--muted); margin-top: 0.4rem; max-width: 46rem; }
+.page-title p { color: var(--muted); margin-top: 0.4rem; }
 
 /* --- Card grid (programs, committee) ------------------------------------ */
 
@@ -218,7 +214,6 @@ section.full-text p { max-width: none; }
   border-left: 3px solid var(--gold);
   padding: 0.2rem 0 0.2rem 1.2rem;
   margin: 1.4rem 0;
-  max-width: 46rem;
 }
 
 .event .when { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
