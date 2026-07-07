@@ -39,7 +39,9 @@ to **commit and push** — that's the publish step.
 
 ## One-time setup (current status and remaining steps)
 
-### 1. GitHub account and repository — TO DO
+### 1. GitHub account and repository — IN PROGRESS
+(Steps 1–2 done: the `mem-consortium` organization exists, contact email
+`mem.consortium@gmail.com`. Remaining: steps 3–6.)
 
 You only need **one** GitHub account (your own; if you already have one, use
 it — no need for a separate account). Recommended structure so the site
@@ -49,17 +51,17 @@ survives webmaster handovers:
    works through personal accounts added to the organization, never a shared
    login).
 2. Create a **free organization** (github.com → + → New organization → Free)
-   named e.g. `memc-consortium`. The organization owns the website, not any
+   named `mem-consortium`. The organization owns the website, not any
    one person's account. Set the organization's contact email to
    `mem.consortium@gmail.com`.
 3. Create a repository in that organization named `memc-website` (public —
    required for free GitHub Pages).
 4. Ask Claude: "Push this project to the GitHub repository
-   memc-consortium/memc-website" (Claude will give you the one-time login
+   mem-consortium/memc-website" (Claude will give you the one-time login
    steps if needed).
 5. On github.com: repository → Settings → Pages → Source: "Deploy from a
    branch" → Branch: `main`, folder: `/docs` → Save.
-6. The site goes live at `https://memc-consortium.github.io/memc-website/`.
+6. The site goes live at `https://mem-consortium.github.io/memc-website/`.
 
 **Handover:** the outgoing webmaster adds the incoming one as an organization
 owner (github.com → organization → People → Invite). Never share passwords.
