@@ -54,14 +54,14 @@ survives webmaster handovers:
    named `mem-consortium`. The organization owns the website, not any
    one person's account. Set the organization's contact email to
    `mem.consortium@gmail.com`.
-3. Create a repository in that organization named `memc-website` (public —
+3. Create a repository in that organization named `website` (public —
    required for free GitHub Pages).
 4. Ask Claude: "Push this project to the GitHub repository
-   mem-consortium/memc-website" (Claude will give you the one-time login
+   mem-consortium/website" (Claude will give you the one-time login
    steps if needed).
 5. On github.com: repository → Settings → Pages → Source: "Deploy from a
    branch" → Branch: `main`, folder: `/docs` → Save.
-6. The site goes live at `https://mem-consortium.github.io/memc-website/`.
+6. The site goes live at `https://mem-consortium.github.io/website/`.
 
 **Handover:** the outgoing webmaster adds the incoming one as an organization
 owner (github.com → organization → People → Invite). Never share passwords.
