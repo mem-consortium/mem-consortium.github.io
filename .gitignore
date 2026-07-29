@@ -2,3 +2,8 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 mailing_list/
+
+# Local source material for page content (agenda PDFs, saved session pages,
+# notes). Content gets copied into docs/; these stay on the maintainer's disk.
+annual_conferences/
+pdws_symposia/

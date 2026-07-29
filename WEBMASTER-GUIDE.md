@@ -8,7 +8,8 @@ tells you what to ask for and how the pieces fit together.
 
 - The website is a set of plain HTML files in the `docs/` folder of this
   project. `docs/index.html` is the About Us page; the other pages are
-  `committee.html`, `conference.html`, `seminars.html`, and `signup.html`.
+  `committee.html`, `conference.html`, `seminars.html`, `pdws-symposia.html`,
+  and `signup.html`.
 - The site is hosted **free on GitHub Pages**. GitHub watches the repository,
   and whenever a change is pushed, the live site updates automatically within
   a minute or two. Publishing = pushing to GitHub. Nothing else to do.
@@ -26,6 +27,7 @@ Open Claude Code in this project folder and ask in plain English. Examples:
 | Add a seminar | "Add a seminar to the current season: Jane Doe (MIT Sloan), March 3 2027, 11am ET, paper title X, her website is …" |
 | Start a new seminar season | "Archive the current seminar season and start the 2027–28 season" |
 | Update the conference | "Update the Annual Conference page for the 3rd MEM conference: [dates, venue, committee]. Here's the program PDF: [file path]" |
+| Add a PDW or symposium | "Add our AOM 2027 PDW to the PDWs & Symposia page. The session page is saved as a PDF in `pdws_symposia/`" |
 | Change committee members | "Remove X from the organizing committee and add Y, position Z, at University W. Photo is at [file path]" |
 | Edit any text | "On the About page, change the sentence '…' to '…'" |
 | Publish changes | "Commit and push my changes so the live site updates" |

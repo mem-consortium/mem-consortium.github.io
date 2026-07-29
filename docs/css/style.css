@@ -219,6 +219,82 @@ section ul { margin: 0 0 1rem 1.4rem; }
 .event .when { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .event .what { font-weight: 600; color: var(--navy); }
 .event p { margin: 0.2rem 0 0; font-size: 0.97rem; }
+.event ul { margin: 0.4rem 0 0 1.3rem; font-size: 0.97rem; }
+.event li { margin-bottom: 0.15rem; }
+
+/* Session abstract: serif body under a small label, to set it apart from the
+   surrounding details (venue, organizers, name lists). */
+.abstract-label {
+  margin-top: 0.9rem !important;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.abstract {
+  font-family: var(--serif);
+  font-size: 1rem !important;
+  line-height: 1.6;
+  margin-top: 0.15rem !important;
+}
+
+/* Group headings inside a toggle ("Panelists", "Papers", ...). */
+.program .roster-head { font-weight: 600; color: var(--navy); margin-top: 0.8rem; }
+.program .roster-head:first-of-type { margin-top: 0.5rem; }
+
+/* --- Collapsible conference program -------------------------------------- */
+
+/* <details class="program"> starts closed; the browser handles expanding it. */
+.program { margin-top: 0.7rem; }
+
+.program > summary {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy);
+  padding: 0.15rem 0;
+  border-bottom: 1px dotted var(--gold);
+}
+
+.program > summary:hover { color: var(--navy-dark); }
+
+/* Sits under the agenda toggle, inside a past-conference entry. */
+.program-download { margin-top: 0.55rem; font-size: 0.97rem; }
+.program .organizers { font-size: 0.97rem; color: var(--muted); margin: 0.9rem 0 0; }
+.program h3 { font-size: 1.1rem; margin: 1.4rem 0 0.3rem; }
+
+.agenda .slot {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0 1.2rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.agenda .time {
+  font-size: 0.88rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.agenda .title { font-weight: 600; color: var(--navy); font-size: 0.97rem; }
+.agenda .item p { margin: 0.15rem 0 0; font-size: 0.95rem; color: var(--muted); }
+.agenda .item ul { margin: 0.4rem 0 0 1.2rem; font-size: 0.95rem; }
+.agenda .item li { margin-bottom: 0.35rem; }
+
+/* Parallel tracks within one time slot (2025 conference). */
+.agenda .subsession { margin-top: 0.6rem; }
+.agenda .subtitle { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+
+/* Stack the time above the session on narrow screens. */
+@media (max-width: 620px) {
+  .agenda .slot { grid-template-columns: 1fr; }
+  .agenda .time { margin-bottom: 0.15rem; }
+}
 
 /* --- Photo band ---------------------------------------------------------- */
 
@@ -230,6 +306,13 @@ section ul { margin: 0 0 1rem 1.4rem; }
 }
 
 .photos figure img { border-radius: 4px; width: 100%; height: 280px; object-fit: cover; }
+
+/* Four photos in a 2x2 block, same picture size as the two-photo band. */
+.photos-2x2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 620px) {
+  .photos-2x2 { grid-template-columns: 1fr; }
+}
 .photos figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
 
 /* --- Embedded Google Form ------------------------------------------------ */

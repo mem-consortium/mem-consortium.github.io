@@ -23,7 +23,7 @@ manual. Two consequences for you:
 
 - `docs/` — the published website (GitHub Pages serves this folder, nothing else).
   - `index.html` (About Us / landing), `committee.html`, `conference.html`,
-    `seminars.html`, `signup.html`
+    `seminars.html`, `pdws-symposia.html`, `signup.html`
   - `css/style.css` — all styling; colors/fonts defined in `:root` variables
   - `images/`, `files/` — only assets actually used by the site
 - `site_media/` — unpublished photo archive from the old Wix site (April 2024
@@ -31,18 +31,24 @@ manual. Two consequences for you:
   with a descriptive kebab-case name when a photo is needed.
 - `wix_html/` — saved HTML of the old Wix site; content reference only. Large
   machine-generated files — Grep them, don't read whole files.
+- `annual_conferences/`, `pdws_symposia/` — local-only source material (agenda
+  PDFs, saved AOM session pages, notes). Git-ignored on purpose: pull content
+  out of them into `docs/`, never commit them.
 - `instructions.md` — original project requirements.
 
 ## Editing conventions
 
 - The nav menu and footer are duplicated in every HTML file. Any nav change
-  must be applied to all five pages; keep the `class="current"` marker on each
+  must be applied to all six pages; keep the `class="current"` marker on each
   page's own link.
 - HTML comments starting with "HOW TO UPDATE" inside the pages document the
   recurring edit patterns (new seminar season, new conference, committee
   changes). Follow and preserve them.
 - Seminar/conference updates follow an archive pattern: current items move
-  down into the "Past" section, new items take their place.
+  down into the "Past" section, new items take their place. A past conference
+  can carry its full agenda in a collapsed `<details class="program">` block
+  (`.agenda` / `.slot` markup) inside its `.event` entry; the 2026 conference
+  is the working example.
 - The Sign Up page embeds a Google Form (responses → Google Sheet = member
   database). The embed URL is the only integration point; placeholder is
   `REPLACE_WITH_GOOGLE_FORM_EMBED_URL` until the form exists.
