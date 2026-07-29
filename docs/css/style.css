@@ -222,16 +222,8 @@ section ul { margin: 0 0 1rem 1.4rem; }
 .event ul { margin: 0.4rem 0 0 1.3rem; font-size: 0.97rem; }
 .event li { margin-bottom: 0.15rem; }
 
-/* Session abstract: serif body under a small label, to set it apart from the
-   surrounding details (venue, organizers, name lists). */
-.abstract-label {
-  margin-top: 0.9rem !important;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-}
-
+/* Session abstract: serif body, to set it apart from the surrounding details
+   (venue, organizers, name lists). Lives inside an "Abstract" toggle. */
 .abstract {
   font-family: var(--serif);
   font-size: 1rem !important;
