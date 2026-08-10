@@ -26,6 +26,8 @@ manual. Two consequences for you:
     `seminars.html`, `pdws-symposia.html`, `signup.html`
   - `css/style.css` — all styling; colors/fonts defined in `:root` variables
   - `images/`, `files/` — only assets actually used by the site
+  - `CNAME` — the custom domain (`mem-consortium.org`). Required for Pages to
+    serve the site there; deleting it reverts to the github.io address.
 - `site_media/` — unpublished photo archive from the old Wix site (April 2024
   photos are from the 1st MEM Conference at Wharton). Copy into `docs/images/`
   with a descriptive kebab-case name when a photo is needed.
@@ -50,15 +52,17 @@ manual. Two consequences for you:
   (`.agenda` / `.slot` markup) inside its `.event` entry; the 2026 conference
   is the working example.
 - The Sign Up page embeds a Google Form (responses → Google Sheet = member
-  database). The embed URL is the only integration point; placeholder is
-  `REPLACE_WITH_GOOGLE_FORM_EMBED_URL` until the form exists.
+  database), owned by `mem.consortium@gmail.com`. The embed URL is the only
+  integration point.
 - Preview: open `docs/*.html` directly in a browser (or `python -m http.server`
   from `docs/`). No build or test commands exist.
 
 ## Status / pending setup
 
-Remaining one-time steps (details in `WEBMASTER-GUIDE.md`): create GitHub
-org + repo and enable Pages from `main:/docs`; create the Google Form and
-replace the embed placeholder in `signup.html`; optional custom domain.
+One-time setup is complete (details in `WEBMASTER-GUIDE.md`): the site is
+published from `main:/docs` of `mem-consortium/mem-consortium.github.io`, the
+Google Form is embedded in `signup.html`, and the custom domain
+**mem-consortium.org** is live (registrar Domain.com, DNS on Domain.com's
+default nameservers, four GitHub A records + `www` CNAME).
 Committee page currently lists the 2025 program committee with initials
 placeholders — real positions and photos still needed from the owner.

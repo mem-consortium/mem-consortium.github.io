@@ -10,9 +10,10 @@ tells you what to ask for and how the pieces fit together.
   project. `docs/index.html` is the About Us page; the other pages are
   `committee.html`, `conference.html`, `seminars.html`, `pdws-symposia.html`,
   and `signup.html`.
-- The site is hosted **free on GitHub Pages**. GitHub watches the repository,
-  and whenever a change is pushed, the live site updates automatically within
-  a minute or two. Publishing = pushing to GitHub. Nothing else to do.
+- The site is hosted **free on GitHub Pages** and lives at
+  **https://mem-consortium.org**. GitHub watches the repository, and whenever
+  a change is pushed, the live site updates automatically within a minute or
+  two. Publishing = pushing to GitHub. Nothing else to do.
 - The member sign-up form on the Sign Up page is a **Google Form** embedded in
   the page. Submissions land automatically in a **Google Sheet** (the member
   database). The website never touches the data — Google handles all of it.
@@ -44,8 +45,8 @@ to **commit and push** — that's the publish step.
 ### 1. GitHub account and repository — DONE
 (The site lives in the `mem-consortium.github.io` repository of the
 `mem-consortium` organization, contact email `mem.consortium@gmail.com`,
-and is published at https://mem-consortium.github.io/. The steps below are
-kept as a record of how it was set up.)
+and is published at https://mem-consortium.org — see section 3 for the
+domain. The steps below are kept as a record of how it was set up.)
 
 You only need **one** GitHub account (your own; if you already have one, use
 it — no need for a separate account). Recommended structure so the site
@@ -95,22 +96,59 @@ password securely and update the account's recovery email/phone
 **Handover:** nothing to transfer — the form and sheet stay owned by
 `mem.consortium@gmail.com`; just hand over that account (see above).
 
-### 3. Custom domain — TO DO (optional)
+### 3. Custom domain — DONE
 
-Buy a domain (~$10–20/year, e.g. Namecheap or Cloudflare Registrar) — the only
-cost in this whole setup. Then either:
+The site's public address is **https://mem-consortium.org**.
+`www.mem-consortium.org` and the old `mem-consortium.github.io` address both
+redirect to it automatically.
 
-- **Proper setup (recommended):** repository Settings → Pages → Custom domain →
-  enter the domain, and at your domain registrar add the DNS records GitHub
-  shows you. HTTPS is automatic. Ask Claude for step-by-step help.
-- **Simple forwarding:** at the registrar, forward the domain to the GitHub
-  Pages URL. Works, but visitors see the github.io address after landing.
+- **Registrar: Domain.com**, under the consortium's account. The domain must be
+  **renewed every year** — this is the only recurring cost of the whole site
+  (~$10–20). Keep auto-renew switched on and the card on file current; if the
+  domain lapses, the site goes dark. Record the renewal date here once you've
+  checked it in Domain.com → My Domains.
+- **Where DNS is managed:** Domain.com → My Domains → `mem-consortium.org` →
+  DNS & Nameservers → DNS Records. The domain uses Domain.com's *default*
+  nameservers — don't switch it to custom/third-party nameservers, or that
+  editor stops working. (Ignore the "Custom Nameservers" page entirely; it is
+  a different, advanced feature.)
+- **The records that make the site work.** Don't delete or edit these:
+
+| Type | Name / Host | Value |
+|---|---|---|
+| A | blank (`@`) | `185.199.108.153` |
+| A | blank (`@`) | `185.199.109.153` |
+| A | blank (`@`) | `185.199.110.153` |
+| A | blank (`@`) | `185.199.111.153` |
+| CNAME | `www` | `mem-consortium.github.io` |
+| TXT | `_github-pages-challenge-mem-consortium` | GitHub domain-verification code |
+
+  The four A records are GitHub's servers. If a registrar ever adds its own
+  "parking" A record alongside them (Domain.com used `208.91.197.27`), delete
+  it — otherwise a fraction of visitors land on a placeholder page instead of
+  the site, seemingly at random.
+
+- **`docs/CNAME`** in this project contains `mem-consortium.org`. That file is
+  what tells GitHub Pages to serve the site at the custom domain. **Do not
+  delete or rename it** — if it disappears, the site reverts to the github.io
+  address.
+- **HTTPS** is automatic: GitHub issues the certificate. "Enforce HTTPS" should
+  be ticked in repository Settings → Pages. It is greyed out for up to an hour
+  after a domain change while the certificate is issued — that's normal.
+
+**Email:** there is no email on this domain (no MX records); consortium mail
+uses `mem.consortium@gmail.com`. If you ever set up `@mem-consortium.org`
+addresses, tell Claude first so the new DNS records don't collide with the
+ones above.
+
+**Handover:** pass on the Domain.com login along with the other accounts.
 
 ## Where things live
 
 | What | Where |
 |---|---|
 | Website pages | `docs/*.html` |
+| Custom domain setting | `docs/CNAME` (don't delete — see section 3) |
 | Design (colors, fonts, layout) | `docs/css/style.css` |
 | Photos used on the site | `docs/images/` |
 | PDFs (conference programs) | `docs/files/` |
