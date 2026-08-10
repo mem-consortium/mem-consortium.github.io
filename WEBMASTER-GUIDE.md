@@ -102,11 +102,13 @@ The site's public address is **https://mem-consortium.org**.
 `www.mem-consortium.org` and the old `mem-consortium.github.io` address both
 redirect to it automatically.
 
-- **Registrar: Domain.com**, under the consortium's account. The domain must be
-  **renewed every year** — this is the only recurring cost of the whole site
-  (~$10–20). Keep auto-renew switched on and the card on file current; if the
-  domain lapses, the site goes dark. Record the renewal date here once you've
-  checked it in Domain.com → My Domains.
+- **Registrar: Domain.com**, under the consortium's account.
+  **Next renewal: 2 August 2028** — worth re-confirming in Domain.com → My
+  Domains, and worth putting in a calendar reminder for a month beforehand.
+  Renewing the domain is the only recurring cost of the whole site (~$10–20 a
+  year). Keep auto-renew switched on and the card on file current: if the
+  domain lapses the site goes dark, and the name can be bought by someone
+  else.
 - **Where DNS is managed:** Domain.com → My Domains → `mem-consortium.org` →
   DNS & Nameservers → DNS Records. The domain uses Domain.com's *default*
   nameservers — don't switch it to custom/third-party nameservers, or that
