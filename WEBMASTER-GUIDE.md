@@ -30,6 +30,7 @@ Open Claude Code in this project folder and ask in plain English. Examples:
 | Update the conference | "Update the Annual Conference page for the 3rd MEM conference: [dates, venue, committee]. Here's the program PDF: [file path]" |
 | Add a PDW or symposium | "Add our AOM 2027 PDW to the PDWs & Symposia page. The session page is saved as a PDF in `pdws_symposia/`" |
 | Change committee members | "Remove X from the organizing committee and add Y, position Z, at University W. Photo is at [file path]" |
+| Post revised bylaws | "The bylaws have been revised — here's the new PDF: [file path]" (they live in the Governance section of the Organizing Committee page) |
 | Edit any text | "On the About page, change the sentence '…' to '…'" |
 | Publish changes | "Commit and push my changes so the live site updates" |
 | Undo a mistake | "The last change broke something — revert it" |
@@ -153,7 +154,7 @@ ones above.
 | Custom domain setting | `docs/CNAME` (don't delete — see section 3) |
 | Design (colors, fonts, layout) | `docs/css/style.css` |
 | Photos used on the site | `docs/images/` |
-| PDFs (conference programs) | `docs/files/` |
+| PDFs (conference programs, bylaws) | `docs/files/` |
 | Committee photos | `docs/images/committee/` (square crops look best) |
 | Full photo archive from old Wix site | `site_media/` (not published) |
 | Old Wix site content (reference only) | `wix_html/` (not published) |
