@@ -52,6 +52,10 @@ manual. Two consequences for you:
   Any change must be applied to all seven pages; keep the `class="current"`
   marker on each page's own nav link (`brand.html` has none — it is not in
   the nav).
+  The header logo `<img>` carries `width="180" height="60"` so it renders at
+  the right size even when a browser is still holding an older cached
+  `style.css` (GitHub Pages caches it 10 minutes); keep those attributes in
+  step with `.wordmark img` in the CSS.
 - HTML comments starting with "HOW TO UPDATE" inside the pages document the
   recurring edit patterns (new seminar season, new conference, committee
   changes). Follow and preserve them.
