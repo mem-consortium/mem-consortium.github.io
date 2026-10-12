@@ -32,6 +32,10 @@ manual. Two consequences for you:
     `images/memc-logo-white.png` is the same logo with the lettering recolored
     white (globe, rings, underline untouched) for dark backgrounds: the home
     page hero and the brand page's second download.
+  - `favicon.ico` (+ `images/favicon-32.png`, `images/apple-touch-icon.png`)
+    — the globe cropped from the logo.
+  - `sitemap.xml`, `robots.txt` — for search engines. Add/rename a page →
+    update `sitemap.xml`.
   - `CNAME` — the custom domain (`mem-consortium.org`). Required for Pages to
     serve the site there; deleting it reverts to the github.io address.
 - `site_media/` — unpublished photo archive from the old Wix site (April 2024
@@ -56,6 +60,11 @@ manual. Two consequences for you:
   the right size even when a browser is still holding an older cached
   `style.css` (GitHub Pages caches it 10 minutes); keep those attributes in
   step with `.wordmark img` in the CSS.
+- Every page's `<head>` carries the same SEO block: title
+  "<Page> — Management in Emerging Markets Consortium (MEMC)", a meta
+  description naming the consortium, canonical URL, favicon links and Open
+  Graph tags. Copy it for a new page. The home page also has a JSON-LD
+  Organization block (name, "MEMC" alternate name, logo).
 - HTML comments starting with "HOW TO UPDATE" inside the pages document the
   recurring edit patterns (new seminar season, new conference, committee
   changes). Follow and preserve them.
@@ -77,5 +86,7 @@ published from `main:/docs` of `mem-consortium/mem-consortium.github.io`, the
 Google Form is embedded in `signup.html`, and the custom domain
 **mem-consortium.org** is live (registrar Domain.com, DNS on Domain.com's
 default nameservers, four GitHub A records + `www` CNAME).
+Google Search Console is not set up yet (steps in the guide, section 4) — the
+site was not appearing on Google as of 2026-10-12.
 Committee page currently lists the 2025 program committee with initials
 placeholders — real positions and photos still needed from the owner.

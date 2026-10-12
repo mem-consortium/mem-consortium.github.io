@@ -149,12 +149,43 @@ ones above.
 
 **Handover:** pass on the Domain.com login along with the other accounts.
 
+### 4. Google search (Search Console) — TO DO
+
+The site is built to be found on Google: every page's title and description
+contains "Management in Emerging Markets Consortium (MEMC)", the home page
+tells Google the official name, the short name "MEMC" and the logo, and
+`docs/sitemap.xml` lists every page. But Google only finds a new site quickly
+once someone claims it in **Google Search Console** (free):
+
+1. Go to https://search.google.com/search-console and sign in as
+   `mem.consortium@gmail.com`.
+2. Add a property → choose **Domain** → enter `mem-consortium.org`.
+3. Google shows a **TXT record**. In Domain.com → DNS, add a TXT record with
+   host `@` and that value (leave the existing A and CNAME records alone).
+   Back in Search Console, click **Verify** (DNS can take up to an hour).
+4. In Search Console → **Sitemaps**, submit `https://mem-consortium.org/sitemap.xml`.
+5. In **URL inspection**, enter `https://mem-consortium.org/` and click
+   **Request indexing**.
+
+Google usually lists the site within a few days to a few weeks. Optionally do
+the same in Bing Webmaster Tools (https://www.bing.com/webmasters), which can
+import the site straight from Search Console.
+
+**What helps most after that: links from other sites.** Ask committee members
+to link to https://mem-consortium.org from their faculty pages and CVs, and
+include the link in AOM/SMS session descriptions, conference calls, emails and
+LinkedIn posts. A search for the full name should find the site soon after
+indexing; "MEMC" alone is shared with other organizations and companies, so
+ranking for it takes longer and depends on these links.
+
 ## Where things live
 
 | What | Where |
 |---|---|
 | Website pages | `docs/*.html` |
 | Custom domain setting | `docs/CNAME` (don't delete — see section 3) |
+| Browser-tab icon (favicon) | `docs/favicon.ico`, `docs/images/favicon-32.png`, `docs/images/apple-touch-icon.png` (the globe from the logo) |
+| Page list for search engines | `docs/sitemap.xml` and `docs/robots.txt` (see section 4) |
 | Design (colors, fonts, layout) | `docs/css/style.css` |
 | Photos used on the site | `docs/images/` |
 | Logo | `docs/images/memc-logo.png` (full size, the download), `docs/images/memc-logo-small.png` (header), and `docs/images/memc-logo-white.png` (white lettering for dark backgrounds — the home page banner and a second download) |
@@ -176,5 +207,6 @@ ones above.
 3. **The navigation menu appears in every HTML file.** If a page is added or
    renamed, the menu must be updated in all of them — Claude knows this
    (it's noted in the files), but check all pages after such a change.
+   A new or renamed page also needs its own entry in `docs/sitemap.xml`.
 4. **Don't rename or move the Google Form questions** once created — the
    linked spreadsheet columns depend on them.

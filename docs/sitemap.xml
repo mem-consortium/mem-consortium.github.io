@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The list of pages for search engines. When a page is added, removed, or renamed, update this list. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mem-consortium.org/</loc></url>
+  <url><loc>https://mem-consortium.org/committee.html</loc></url>
+  <url><loc>https://mem-consortium.org/conference.html</loc></url>
+  <url><loc>https://mem-consortium.org/seminars.html</loc></url>
+  <url><loc>https://mem-consortium.org/pdws-symposia.html</loc></url>
+  <url><loc>https://mem-consortium.org/signup.html</loc></url>
+  <url><loc>https://mem-consortium.org/brand.html</loc></url>
+</urlset>

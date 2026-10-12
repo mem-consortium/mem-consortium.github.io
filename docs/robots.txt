@@ -1,0 +1,6 @@
+# Lets all search engines index the whole site, and tells them where the
+# list of pages (sitemap.xml) is.
+User-agent: *
+Allow: /
+
+Sitemap: https://mem-consortium.org/sitemap.xml
