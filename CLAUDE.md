@@ -29,6 +29,9 @@ manual. Two consequences for you:
   - `images/`, `files/` — only assets actually used by the site.
     `images/memc-logo.png` is the full-size logo (brand page + download);
     `images/memc-logo-small.png` (480px wide) is the header logo on every page.
+    `images/memc-logo-white.png` is the same logo with the lettering recolored
+    white (globe, rings, underline untouched) for dark backgrounds: the home
+    page hero and the brand page's second download.
   - `CNAME` — the custom domain (`mem-consortium.org`). Required for Pages to
     serve the site there; deleting it reverts to the github.io address.
 - `site_media/` — unpublished photo archive from the old Wix site (April 2024

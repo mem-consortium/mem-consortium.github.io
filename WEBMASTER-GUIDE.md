@@ -33,7 +33,7 @@ Open Claude Code in this project folder and ask in plain English. Examples:
 | Add a PDW or symposium | "Add our AOM 2027 PDW to the PDWs & Symposia page. The session page is saved as a PDF in `pdws_symposia/`" |
 | Change committee members | "Remove X from the organizing committee and add Y, position Z, at University W. Photo is at [file path]" |
 | Post revised bylaws | "The bylaws have been revised — here's the new PDF: [file path]" (they live in the Governance section of the Organizing Committee page) |
-| Replace the logo | "Here's the new MEMC logo: [file path]. Update the site with it" (the full-size file is the Logo & Brand download; a ~480px-wide copy is the header logo on every page) |
+| Replace the logo | "Here's the new MEMC logo: [file path]. Update the site with it" (the full-size file is the Logo & Brand download; a ~480px-wide copy is the header logo on every page; a white-lettered copy is the home page banner and the dark-background download — ask Claude to remake it from the new logo too) |
 | Edit any text | "On the About page, change the sentence '…' to '…'" |
 | Publish changes | "Commit and push my changes so the live site updates" |
 | Undo a mistake | "The last change broke something — revert it" |
@@ -157,7 +157,7 @@ ones above.
 | Custom domain setting | `docs/CNAME` (don't delete — see section 3) |
 | Design (colors, fonts, layout) | `docs/css/style.css` |
 | Photos used on the site | `docs/images/` |
-| Logo | `docs/images/memc-logo.png` (full size, the download) and `docs/images/memc-logo-small.png` (header) |
+| Logo | `docs/images/memc-logo.png` (full size, the download), `docs/images/memc-logo-small.png` (header), and `docs/images/memc-logo-white.png` (white lettering for dark backgrounds — the home page banner and a second download) |
 | PDFs (conference programs, bylaws) | `docs/files/` |
 | Committee photos | `docs/images/committee/` (square crops look best) |
 | Full photo archive from old Wix site | `site_media/` (not published) |
