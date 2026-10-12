@@ -87,8 +87,8 @@ Google Form is embedded in `signup.html`, and the custom domain
 **mem-consortium.org** is live (registrar Domain.com, DNS on Domain.com's
 default nameservers, four GitHub A records + `www` CNAME).
 Google Search Console: Domain property created and its verification TXT record
-added at Domain.com on 2026-10-12 (guide, section 4); sitemap submission and
-indexing request still to do. The site was not appearing on Google as of that
+added at Domain.com on 2026-10-12 (guide, section 4); verified, sitemap
+submitted and home page indexing requested the same day. The site was not appearing on Google as of that
 date. Check DNS with a trailing dot (`nslookup -type=TXT mem-consortium.org.
 ns89.worldnic.com`) — without it, Windows appends the local search suffix.
 Committee page currently lists the 2025 program committee with initials
