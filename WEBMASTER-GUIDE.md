@@ -149,7 +149,14 @@ ones above.
 
 **Handover:** pass on the Domain.com login along with the other accounts.
 
-### 4. Google search (Search Console) — TO DO
+### 4. Google search (Search Console) — IN PROGRESS
+
+Status (2026-10-12): the Search Console **Domain** property for
+`mem-consortium.org` was created under `mem.consortium@gmail.com`, and its
+verification TXT record was added in Domain.com DNS (host `@`, value
+`google-site-verification=Mhub_TIFCcF6_83QGOAPE1SHtScMC3x5qZ0zp47W5qA`).
+**Never delete that TXT record** — Google re-checks it, and removing it
+un-verifies the site. Remaining: steps 4–5 below (sitemap, request indexing).
 
 The site is built to be found on Google: every page's title and description
 contains "Management in Emerging Markets Consortium (MEMC)", the home page
