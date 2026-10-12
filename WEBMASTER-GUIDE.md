@@ -9,7 +9,9 @@ tells you what to ask for and how the pieces fit together.
 - The website is a set of plain HTML files in the `docs/` folder of this
   project. `docs/index.html` is the About Us page; the other pages are
   `committee.html`, `conference.html`, `seminars.html`, `pdws-symposia.html`,
-  and `signup.html`.
+  `signup.html`, and `brand.html` (Logo & Brand — the official logo and
+  organization details for partners; linked from the footer only, not the
+  top menu).
 - The site is hosted **free on GitHub Pages** and lives at
   **https://mem-consortium.org**. GitHub watches the repository, and whenever
   a change is pushed, the live site updates automatically within a minute or
@@ -31,6 +33,7 @@ Open Claude Code in this project folder and ask in plain English. Examples:
 | Add a PDW or symposium | "Add our AOM 2027 PDW to the PDWs & Symposia page. The session page is saved as a PDF in `pdws_symposia/`" |
 | Change committee members | "Remove X from the organizing committee and add Y, position Z, at University W. Photo is at [file path]" |
 | Post revised bylaws | "The bylaws have been revised — here's the new PDF: [file path]" (they live in the Governance section of the Organizing Committee page) |
+| Replace the logo | "Here's the new MEMC logo: [file path]. Update the site with it" (the full-size file is the Logo & Brand download; a ~480px-wide copy is the header logo on every page) |
 | Edit any text | "On the About page, change the sentence '…' to '…'" |
 | Publish changes | "Commit and push my changes so the live site updates" |
 | Undo a mistake | "The last change broke something — revert it" |
@@ -154,10 +157,12 @@ ones above.
 | Custom domain setting | `docs/CNAME` (don't delete — see section 3) |
 | Design (colors, fonts, layout) | `docs/css/style.css` |
 | Photos used on the site | `docs/images/` |
+| Logo | `docs/images/memc-logo.png` (full size, the download) and `docs/images/memc-logo-small.png` (header) |
 | PDFs (conference programs, bylaws) | `docs/files/` |
 | Committee photos | `docs/images/committee/` (square crops look best) |
 | Full photo archive from old Wix site | `site_media/` (not published) |
 | Old Wix site content (reference only) | `wix_html/` (not published) |
+| Original logo file and brand-page draft | `brand/` (not published) |
 | This guide | `WEBMASTER-GUIDE.md` |
 | Instructions for Claude itself | `CLAUDE.md` |
 

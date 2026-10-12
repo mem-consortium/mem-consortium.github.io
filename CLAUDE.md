@@ -23,9 +23,12 @@ manual. Two consequences for you:
 
 - `docs/` — the published website (GitHub Pages serves this folder, nothing else).
   - `index.html` (About Us / landing), `committee.html`, `conference.html`,
-    `seminars.html`, `pdws-symposia.html`, `signup.html`
+    `seminars.html`, `pdws-symposia.html`, `signup.html`, `brand.html`
+    (Logo & Brand page — linked from the footer only, not the nav)
   - `css/style.css` — all styling; colors/fonts defined in `:root` variables
-  - `images/`, `files/` — only assets actually used by the site
+  - `images/`, `files/` — only assets actually used by the site.
+    `images/memc-logo.png` is the full-size logo (brand page + download);
+    `images/memc-logo-small.png` (480px wide) is the header logo on every page.
   - `CNAME` — the custom domain (`mem-consortium.org`). Required for Pages to
     serve the site there; deleting it reverts to the github.io address.
 - `site_media/` — unpublished photo archive from the old Wix site (April 2024
@@ -36,13 +39,16 @@ manual. Two consequences for you:
 - `annual_conferences/`, `pdws_symposia/` — local-only source material (agenda
   PDFs, saved AOM session pages, notes). Git-ignored on purpose: pull content
   out of them into `docs/`, never commit them.
+- `brand/` — local-only: original logo file and the draft brand page the
+  live `brand.html` was based on. Git-ignored.
 - `instructions.md` — original project requirements.
 
 ## Editing conventions
 
-- The nav menu and footer are duplicated in every HTML file. Any nav change
-  must be applied to all six pages; keep the `class="current"` marker on each
-  page's own link.
+- The header (logo + nav menu) and footer are duplicated in every HTML file.
+  Any change must be applied to all seven pages; keep the `class="current"`
+  marker on each page's own nav link (`brand.html` has none — it is not in
+  the nav).
 - HTML comments starting with "HOW TO UPDATE" inside the pages document the
   recurring edit patterns (new seminar season, new conference, committee
   changes). Follow and preserve them.
